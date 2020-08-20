@@ -1,0 +1,157 @@
+* {
+    border: none;
+    box-sizing: border-box;
+}
+
+.App {
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: 10% 85% 5%;
+    grid-template-rows: 5% 95%;
+}
+
+#sidebar {
+    grid-column: 1 / span 1;
+    grid-row: 2 / span 1;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#workspace {
+    grid-column: 2 / span 1;
+    grid-row: 2 / span 1;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border: 5px solid rgb(2,74,148);
+    height: minmax(100vh, calc(max-content + 25px));
+    padding-bottom: 50px;
+    margin-bottom: 15px;
+}
+
+.sidebar-button.active {
+    background-color: rgb(236,112,22);
+}
+
+.sidebar-button {
+    margin: 15px;
+    height: 5em;
+    width: 90%;
+    padding: 0.5em;
+    background-color: rgb(2,74,148);
+    color: white;
+    font-weight: bolder;
+    font-size: 1em;
+    border-radius: 1em;
+}
+
+.sidebar-button:focus {
+    outline: none;
+}
+
+.sidebar-button:hover {
+    cursor: pointer;
+}
+
+.form-register {
+    width: 35%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.input-row {
+    display: flex;
+    justify-content: space-between;
+    margin: 2% 0;
+    height: 2.5em;
+}
+
+.header-section {
+    top: 10%;
+    font-size: 2em;
+}
+
+.input-row > input, .input-row > select {
+    border: 2px solid grey;
+    border-radius: 5px;
+    width: 50%;
+    padding: 0 5px;
+}
+
+.input-error {
+    border: 2px solid red !important;
+}
+
+.save-button {
+    width: 25%;
+    height: 3em;
+    background-color: rgb(2,74,148);
+    align-self: center;
+    border-radius: 1em;
+    font-weight: bolder;
+    font-size: 16px;
+    color: white;
+}
+
+.save-button:hover {
+    cursor: pointer;
+    background-color: rgb(236,112,22);
+}
+
+.save-button:focus {
+    outline: none;
+}
+
+.error-message {
+    color: red;
+    font-weight: bold;
+    text-align-last: center;
+}
+
+.notification-success {
+    text-align: center;
+    font-size: 12px;
+    border: 2px solid black;
+    border-radius: 15px;
+    padding: 0 15px;
+    background-color: rgb(236,112,22);
+    color: white;
+}
+
+.notification-success > h1 {
+    border-bottom: 2px solid white;
+    padding-bottom: 5px;
+}
+
+#agents-report, tr, th {
+    border: 2px solid black;
+    border-collapse: collapse;
+}
+
+#agents-report {
+    width: 80%;
+    overflow: scroll;
+}
+
+#form-report {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 15px 0;
+    width: 80%;
+}
+
+#form-report > input, #form-report > select {
+    border: 2px solid black;
+    margin: 0 25px
+}
+
+#form-report > .save-button {
+    width: 10%;
+}
